@@ -7,9 +7,12 @@ public class GestorHilos {
     private int intervalo;
     private int inicio;
     private int fin;
+    private boolean pausa;
+
 
     public GestorHilos(){
-
+        this.listaHilos = listaHilos;
+        this.pausa= false;
     }
     public void dividirHilos(){
         intervalo = fin/listaHilos.size();
@@ -39,5 +42,13 @@ public class GestorHilos {
 
     public void setFin(int fin) {
         this.fin = fin;
+    }
+
+    public void Pausar(){
+        this.pausa = true;
+    }
+
+    public boolean estaPausado(){
+        return pausa;
     }
 }

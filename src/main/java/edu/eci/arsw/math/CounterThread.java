@@ -6,6 +6,7 @@ import static edu.eci.arsw.math.Main.bytesToHex;
 public class CounterThread extends Thread{
     private int inicio;
     private int fin;
+    private GestorHilos gestor;
 
     public CounterThread(){
     }
